@@ -90,3 +90,5 @@ Expand the caching feature, right now it only caches the latest one but maybe I'
 
 Implement basic auth features 
 
+Show amount of fraudulent customeres per scan in the scan index page
+
