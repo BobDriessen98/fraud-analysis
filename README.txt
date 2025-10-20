@@ -92,5 +92,7 @@ As said above, improve the way I use the updateOrCreate function by creating a m
 
 Improve error handling by creating an error page that shows more detail about an error if the application crashes
 
+Expand the caching feature, right now it only caches the latest one but maybe I'd be good for performance if all scans that occurred today are cached. I'd also cache queries where the result never changes (like fetching fraud reasons).
+
 Implement basic auth features 
 
