@@ -29,7 +29,7 @@ API routes:
 http://localhost/api/scans/index > shows a list of all scans, with all customers belonging to that scan and the fraud reasons for each customer (if they have any)
 http://localhost/api/scans/:id > shows a specific scan
 
-If using PHPStorm and you want to run feature test:
+If using PHPStorm and you want to run feature tests:
 1. Go to file>settings>PHP
 2. Click the dots next to CLI interpreter
 3. Click the + and then "from docker..."
