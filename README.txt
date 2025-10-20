@@ -11,13 +11,23 @@ STEPS TO INSTALL
 	>docker compose up -d --build
 	>docker compose exec app composer install
 	>docker compose exec app php artisan key:generate
-	>docker compose exec app chmod -R 777 .
 	>docker compose exec app php artisan migrate
 		Select "yes" when asked to create a sqlite database
-	>sudo chmod -R 777 database storage
+	>sudo chmod -R 777 .
 	>docker compose exec app php artisan db:seed
 8. Start the external API docker application by running >docker run -p 8080:80 vzdeveloper/customers-api:latest
 9. Navigate to localhost/scans/index, application should show the index page.
+
+AVAILABLE ROUTES
+
+Web routes:
+http://localhost/scans/index > lists all scans
+http://localhost/scans/latest > shows latest scan from cache
+http://localhost/scans/:id > fetch a specific scan and shows this scan
+
+API routes:
+http://localhost/api/scans/index > shows a list of all scans, with all customers belonging to that scan and the fraud reasons for each customer (if they have any)
+http://localhost/scans/:id > shows a specific scan
 
 If using PHPStorm and you want to run feature test:
 1. Go to file>settings>PHP
