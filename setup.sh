@@ -24,6 +24,3 @@ echo "Seeding database"
 docker compose exec app php artisan db:seed
 
 echo "Setup complete"
-echo "You can now start the external API container with:"
-echo "  docker run -p 8080:80 vzdeveloper/customers-api:latest"
-echo "Then open: http://localhost/scans/index"
