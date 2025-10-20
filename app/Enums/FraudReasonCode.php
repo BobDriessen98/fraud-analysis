@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Enums;
+
+enum FraudReasonCode: string
+{
+    case DUPLICATE_IBAN = 'DUPLICATE_IBAN';
+    case DUPLICATE_IP_ADDRESS = 'DUPLICATE_IP_ADDRESS';
+    case FOREIGN_PHONE_NUMBER = 'FOREIGN_PHONE_NUMBER';
+    case UNDERAGE_CUSTOMER = 'UNDERAGE_CUSTOMER';
+}

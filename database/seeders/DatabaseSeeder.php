@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Enums\FraudReasonCode;
+use App\Models\FraudReason;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +16,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->seedFraudReasons();
+    }
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+    private function seedFraudReasons(): void
+    {
+        FraudReason::create([
+            'code' => FraudReasonCode::DUPLICATE_IBAN,
+            'description' => 'Duplicate IBAN',
+        ]);
+        FraudReason::create([
+            'code' => FraudReasonCode::DUPLICATE_IP_ADDRESS,
+            'description' => 'Duplicate IP Address',
+        ]);
+        FraudReason::create([
+            'code' => FraudReasonCode::FOREIGN_PHONE_NUMBER,
+            'description' => 'Foreign phone number',
+        ]);
+        FraudReason::create([
+            'code' => FraudReasonCode::UNDERAGE_CUSTOMER,
+            'description' => 'Underage customer',
         ]);
     }
 }

@@ -1,9 +1,7 @@
-version: "3.8"
-
 services:
   app:
     build: .
-    container_name: laravel_app
+    container_name: fraud_analysis_app
     volumes:
       - .:/var/www/html
     networks:
@@ -11,7 +9,7 @@ services:
 
   web:
     image: nginx:stable
-    container_name: laravel_web
+    container_name: fraud_analysis_web
     ports:
       - "80:80"
     volumes:
