@@ -4,7 +4,7 @@ STEPS TO INSTALL
 2. Install WSL
 3. Enter the WSL CLI
 4. Run >docker pull vzdeveloper/customers-api
-5. Run >git clone https://github.com/BobDriessen98/fraud-analysis.git
+5. Run >git clone https://github.com/BobDriessen98/fraud-analysis.git (install git if you don't have it using >sudo apt install git -y)
 6. In fraud-analyis project root, rename .env.example to .env
 7. Run the following commands:
 	>cd fraud-analysis
