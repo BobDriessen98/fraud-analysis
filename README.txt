@@ -6,7 +6,7 @@ STEPS TO INSTALL
 4. Run >docker pull vzdeveloper/customers-api
 5. Run >git clone https://github.com/BobDriessen98/fraud-analysis.git (install git if you don't have it using >sudo apt install git -y)
 6. Run >cd fraud-analysis (to go to the project root)
-7. Run >./setup.sh
+7. Run >./setup.sh (If you don't have permission to run this, run >chmod +x setup.sh)
 8. Start the external API docker application by running >docker run -p 8080:80 vzdeveloper/customers-api:latest
 9. Navigate to localhost/scans/index, application should show the index page.
 
