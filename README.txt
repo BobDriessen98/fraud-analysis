@@ -27,7 +27,7 @@ http://localhost/scans/:id > fetch a specific scan and shows this scan
 
 API routes:
 http://localhost/api/scans/index > shows a list of all scans, with all customers belonging to that scan and the fraud reasons for each customer (if they have any)
-http://localhost/scans/:id > shows a specific scan
+http://localhost/api/scans/:id > shows a specific scan
 
 If using PHPStorm and you want to run feature test:
 1. Go to file>settings>PHP
