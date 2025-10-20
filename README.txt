@@ -1,7 +1,7 @@
 STEPS TO INSTALL
 
-1. Install and run docker desktop
-2. Install WSL
+1. Install WSL 
+2. Install and run docker desktop
 3. Enter the WSL CLI
 4. Run >docker pull vzdeveloper/customers-api
 5. Run >git clone https://github.com/BobDriessen98/fraud-analysis.git (install git if you don't have it using >sudo apt install git -y)
