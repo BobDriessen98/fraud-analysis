@@ -1,6 +1,6 @@
 STEPS TO INSTALL
 
-1. Install docker desktop
+1. Install and run docker desktop
 2. Install WSL
 3. Enter the WSL CLI
 4. Run >docker pull vzdeveloper/customers-api
