@@ -8,17 +8,17 @@ STEPS TO INSTALL
 6. Run >cd fraud-analysis (to go to the project root)
 7. Run >./setup.sh (If you don't have permission to run this, run >chmod +x setup.sh)
 8. Start the external API docker application by running >docker run -p 8080:80 vzdeveloper/customers-api:latest
-9. Navigate to localhost/scans/index, application should show the index page.
+9. Navigate to localhost/scans/, application should show the index page for scans.
 
 AVAILABLE ROUTES
 
 Web routes:
-http://localhost/scans/index > lists all scans
+http://localhost/scans/ > lists all scans
 http://localhost/scans/latest > shows latest scan from cache
 http://localhost/scans/:id > fetch a specific scan and shows this scan
 
 API routes:
-http://localhost/api/scans/index > shows a list of all scans, with all customers belonging to that scan and the fraud reasons for each customer (if they have any)
+http://localhost/api/scans/ > shows a list of all scans, with all customers belonging to that scan and the fraud reasons for each customer (if they have any)
 http://localhost/api/scans/:id > shows a specific scan
 
 If using PHPStorm and you want to run feature tests:
