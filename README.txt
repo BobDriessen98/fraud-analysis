@@ -77,6 +77,8 @@ I only created one feature test without too many edge cases. If I had more time 
 
 When storing customers using the updateOrCreate function, I manually map keys from the external API array to a database column. This is not really maintainable. I did this because the data from the API comes in as camelCase while the DB expects snake_case. Otherwise I could just pass in the data from the validator object to store the data. I chose to keep it like this because it works fine and did not want to waste time on creating a conversion method to make the imported data snake_case.
 
+In the HTML there are a lot of duplicate tailwind classes, for now I just kept it in the HTML file for simplicity but ideally I'd create an scss class where I would define shared styles like for table rows.
+
 ------------------------------------------------
 If I had more time, what would I improve or add?
 ------------------------------------------------
