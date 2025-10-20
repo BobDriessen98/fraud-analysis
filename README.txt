@@ -5,18 +5,10 @@ STEPS TO INSTALL
 3. Enter the WSL CLI
 4. Run >docker pull vzdeveloper/customers-api
 5. Run >git clone https://github.com/BobDriessen98/fraud-analysis.git (install git if you don't have it using >sudo apt install git -y)
-6. Run the following commands:
-	>cd fraud-analysis (to go to the project root)
-    >mv .env.example .env
-	>docker compose up -d --build
-	>docker compose exec app composer install
-	>docker compose exec app php artisan key:generate
-	>docker compose exec app php artisan migrate
-		Select "yes" when asked to create a sqlite database
-	>sudo chmod -R 777 .
-	>docker compose exec app php artisan db:seed
-7. Start the external API docker application by running >docker run -p 8080:80 vzdeveloper/customers-api:latest
-8. Navigate to localhost/scans/index, application should show the index page.
+6. Run >cd fraud-analysis (to go to the project root)
+7. Run >./setup.sh
+8. Start the external API docker application by running >docker run -p 8080:80 vzdeveloper/customers-api:latest
+9. Navigate to localhost/scans/index, application should show the index page.
 
 AVAILABLE ROUTES
 
