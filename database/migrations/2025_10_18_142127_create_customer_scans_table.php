@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->integer('customer_id');
             $table->integer('scan_id');
+
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('scan_id')->references('id')->on('scans')->onDelete('cascade');
         });
     }
 

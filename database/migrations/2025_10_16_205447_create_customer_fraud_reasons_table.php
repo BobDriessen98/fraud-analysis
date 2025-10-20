@@ -16,6 +16,9 @@ return new class extends Migration
             $table->integer('customer_id');
             $table->integer('fraud_reason_id');
             $table->string('context');
+
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('fraud_reason_id')->references('id')->on('fraud_reasons')->onDelete('cascade');
         });
     }
 

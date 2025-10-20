@@ -29,12 +29,6 @@ return new class extends Migration
             $table->date('last_invoice_date')->nullable();
             $table->dateTime('last_login_date_time')->nullable();
             $table->timestamps();
-
-            /*
-             * For this assessment I am using SQLite, therefore constraints/FK relations on database level
-             * are not possible. If it were possible I would create a FK relation to the scans table.
-             */
-
         });
     }
 
