@@ -76,7 +76,9 @@ If I had more time, what would I improve or add?
 ------------------------------------------------
 Improve the way the reason why a customer is fraudulent is fetched. I'd not store the data in the context column like I do now but create a function/relationship query that determines the reason when fetching the customer.
 
-Create a view that shows all customers, with a filter function to only show the fraudulent ones. I' also add filter options to only see customers with (a) specific fraud reason(s)
+Create a view that shows all customers, with a filter function to only show the fraudulent ones. I' also add filter options to only see customers with (a) specific fraud reason(s). Also create an API point to fetch the customers.
+
+I'd make the scan function call asynchronous. Right now it runs synchronously which causes the application to "freeze" for a couple of seconds. Ideally you'd just see "processing scan" and wait until the backend passes the result to the front end without freezing the application.
 
 I'd expand the feature/unit tests so I also test the controllers/repositories.
 
